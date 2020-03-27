@@ -1,0 +1,19 @@
+<h5>Employee Detail</h5>
+<div>
+    <form [formGroup]="form" (ngSubmit)="onFormSubmit()">
+        <div>
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" formControlName="firstName">
+        </div>
+        <div>
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" formControlName="lastName">
+        </div>
+        <div>
+            <button class="btn waves-effect waves-light" type="submit"><i class="material-icons left">save</i>
+                Save</button>
+            <button class="btn waves-effect waves-light" type="button" (click)="onCancel()"><i
+                    class="material-icons left">cancel</i> Cancel</button>
+        </div>
+    </form>
+</div>

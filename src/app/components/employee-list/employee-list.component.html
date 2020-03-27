@@ -1,0 +1,29 @@
+<h5>List Employee</h5>
+<div>
+  <a routerLink="detail/0" title="add"><i class="tiny material-icons">add_circle</i> add</a>
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a routerLink="detail/1" title="edit"><i class="tiny material-icons">edit</i> edit</a> | <a
+            routerLink="detail/1" title="delete"><i class="tiny material-icons">delete_forever</i> delete</a></td>
+        <td>Agus</td>
+        <td>Triantoro</td>
+      </tr>
+      <tr *ngFor="let emp of employees">
+        <td><a routerLink="detail/{{emp.id}}" title="edit"><i class="tiny material-icons">edit</i> edit</a> | <a
+            href="javascript:" (click)="onDelete(emp)" title="delete"><i class="tiny material-icons">delete_forever</i>
+            delete</a>
+        </td>
+        <td>{{emp.firstName}}</td>
+        <td>{{emp.lastName}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
